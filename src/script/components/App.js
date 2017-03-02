@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
+import MyComponent from './MyComponent'
 import logo from '../../images/logo.svg';
 import '../../style/dist/components/App.css';
 
+// ES6 Class
+// https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Classes
 class App extends Component {
   render() {
     return (
@@ -13,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <MyComponent subtitle="I am embedded in another component." />
       </div>
     );
   }

@@ -1,5 +1,5 @@
 {
-  "name": "nook-shop",
+  "name": "react-starter-npm",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
@@ -12,10 +12,10 @@
     "react-scripts": "0.9.3"
   },
   "scripts": {
-    "build-css": "node-sass src/style/sass/*.scss -o src/style/dist",
-    "build-css-components": "node-sass src/style/sass/components/*.scss -o src/style/dist/components",
-    "watch-css": "npm run watch-css-components && node-sass src/style/sass/*.scss -o src/style/dist --watch",
-    "watch-css-components": "node-sass src/style/sass/components/*.scss -o src/style/dist/components --watch --recursive",
+    "build-css": "npm run build-css-components && node-sass src/style -o src/style/dist",
+    "build-css-components": "node-sass src/style/components -o src/style/dist/components",
+    "watch-css": "npm run build-css && npm run watch-css-components && node-sass src/style -o src/style/dist --watch",
+    "watch-css-components": "node-sass src/style/components -o src/style/dist/components --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
     "build": "npm run build-css && react-scripts build",
